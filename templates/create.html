@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Добавление товара</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Добавление товара</h1> <br>
+    <form method="post">
+        <input type="text" class="form-control" name="title" id="title" placeholder="Введите наименование товара"> <br>
+        <input type="text" class="form-control" name="price" id="price" placeholder="Укажите цену"><br>
+        <textarea class="form-control" rows="5" name="description" id="description" placeholder="Добавьте описание товара"></textarea><br>
+        <button class="btn btn-success" type="submit" style="margin-left: 45%">Добавить товар</button>
+    </form>
+</div>
+{% endblock %}
